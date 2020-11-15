@@ -36,19 +36,20 @@
             <div class="container d-flex align-items-end vh-100 justify-content-center" style="height: 100vh">
                 <div class="m-5 p-5">
                     <h1>He's been rolling for <div id="counter"></div> seconds!</h1>
-                    <h3 id="songname">Playing !"£$%^&*()</h3>
+                    <h3 id="songname">Playing <div id = "nowplaying"></div></h3>
                     <h6>
                         <a id="tweeturl" href="https://twitter.com/" target="_blank">Tweet</a>
                         -
-                        <a id="skipsong">Skip</a>
+                        <a id="skipsong" href="javascript:audio.GoToNext();">Skip</a>
                     </h6>
                 </div>
             </div>
         </div>
       </div>
+      <audio id="audio" onended="audio.GoToNext()"></audio>
       <script src="WhereTheMagicHappens.js"></script>
       <script>
-          const audio = new music([{name: "Cats On Mars", audio: "Cats On Mars.mp3"}]);
+          const audio = new music([{name: "Cats On Mars", audio: "Cats On Mars.mp3"}, {name: "Dan Salvato - Dreams of Love and Literature (Febbs Remix)", audio: "[Chill] Dan Salvato - Dreams of Love and Literature (Febbs Remix).mp3"}, {name: "Febbs! - It's Okay", audio: "[Future Bass] Febbs! - It's Okay.mp3"}, {name: "GoldHeartSenpai (Febbs!) - My Future", audio: "[Future Bass] GoldHeartSenpai (Febbs!) - My Future.mp3"}, {name: "Febbs! - Cupcakes", audio: "[Glitch Hop] Febbs! - Cupcakes.mp3"}, {name: "Febbs! - Cupcakes (Nezakil Remix)", audio: "[Lo-fi Hip-Hop] Febbs! - Cupcakes (Nezakil Remix).mp3"}]);
           audio.GoToNext();
       </script>
     <!--gross js bootstrap code :(-->

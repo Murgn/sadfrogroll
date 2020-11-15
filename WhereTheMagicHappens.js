@@ -15,7 +15,8 @@ function number_format(val, decimals){
 
 class music {
     constructor(music) {
-        this.audioElement = new Audio();
+        this.audioElement = document.getElementById("audio")
+        this.nowPlayingElement = document.getElementById("nowplaying")
         this.audioElement.volume = 0.2;
         this.music = music;
         this.idx = -1;
@@ -24,14 +25,15 @@ class music {
     GoToNext() {
         this.idx++;
 
-        if (this.idx > this.music.length) {
+        if (this.idx > this.music.length-1) {
             this.idx = 0;
         }
         this.Play(this.idx)
     }
 
     Play(index) {
-        this.audioElement.src = music[this.idx]
+        this.nowPlayingElement.innerHTML = this.music[index]['name']
+        this.audioElement.src = "Music/" + this.music[index]['audio']
         this.audioElement.play();
     }
 }
