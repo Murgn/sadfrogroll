@@ -99,7 +99,7 @@
         </svg>
     </div>
 
-    <canvas id="canvas"></canvas>
+    <!--canvas id="canvas"></canvas>!-->
 
     <div class="row h-100">
         <div class="col">
@@ -114,11 +114,13 @@
             <div class="container d-flex align-items-end vh-100 justify-content-center" style="height: 100vh">
                 <div class="m-5 p-5">
                     <h1><a id="sadfrogtext">sadfrog</a> has been rolling for <a id="counter"></a> seconds!</h1>
-                    <h3><div id="playing"></div><div id = "nowplaying">Click anywhere to play music!</div></h3>
+                    <h3><a id="playing"></a><a id = "nowplaying">Click anywhere to play music!</a></h3>
                     <h6>
                         <a id="tweeturl" href="https://twitter.com/" target="_blank">Tweet</a>
                         -
                         <a id="skipsong" href="javascript:audio.GoToNext();">Skip</a>
+                        -
+                        <a id="skipsong" href="javascript:audio.Stop();">Mute</a>
                     </h6>
                 </div>
             </div>

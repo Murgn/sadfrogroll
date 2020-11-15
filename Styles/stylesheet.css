@@ -57,18 +57,24 @@ a:visited {
 @media screen and (max-width: 500px){
 
     h1{
-        font-size: 5vh;
+        font-size: 4vh;
     }
     h3{
-        font-size: 4vh;
+        font-size: 3vh;
     }
     h6{
-        font-size: 4vh;
+        font-size: 2vh;
     }
     
 }
 
-
+*{
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
 
 /*SNOW CSS*/
 .debris {

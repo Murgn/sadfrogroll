@@ -24,6 +24,11 @@ class music {
         this.idx = -1;
     }
 
+    Stop(){
+        this.audioElement.pause();
+        playing = false;
+    }
+
     GoToNext() {
         this.idx++;
 
@@ -37,6 +42,7 @@ class music {
         this.nowPlayingElement.innerHTML = this.music[index]['name']
         this.audioElement.src = "Music/" + this.music[index]['audio']
         this.audioElement.play();
+        
     }
 }
 const audio = new music([
@@ -49,11 +55,23 @@ const audio = new music([
     {name: "Porter Robinson - Goodbye To A World", audio: "Porter Robinson - Goodbye To A World.mp3"},
     {name: "Yu-Ching Fei - Yi Jian Mei", audio: "Yu-Ching Fei - Yi Jian Mei.mp3"},
     {name: "Vicetone - Astronomia", audio: "Vicetone - Astronomia.mp3"},
-    {name: "Ouse - ｆａｒｃｒｙツ", audio: "Ouse - ｆａｒｃｒｙツ.mp3"}]);
+    {name: "Ouse - ｆａｒｃｒｙツ", audio: "Ouse - ｆａｒｃｒｙツ.mp3"},
+    {name: "Men At Work - Down Under", audio: "Men At Work - Down Under.mp3"},
+    {name: "INZO - Overthinker", audio: "INZO - Overthinker.mp3"},
+    {name: "Absofacto - Dissolve", audio: "Absofacto - Dissolve.mp3"},
+    {name: "Capital Cities - Safe And Sound", audio: "Capital Cities - Safe And Sound.mp3"}]);
 document.onclick= function(event) {
     if (event===undefined) event= window.event;
-    audio.GoToNext();
-    document.getElementById("playing").innerHTML = "Playing:";
+    if(playing==false) audio.GoToNext();
+    playing = true;
+    
+    document.getElementById("playing").innerHTML = "Playing ";
 };
+setInterval(() => {
+    if(playing == false){
+        document.getElementById("nowplaying").innerHTML = "Click anywhere to play music!"
+        document.getElementById("playing").innerHTML = "";}
+}, 1)
+
 
 // to find js particles goto desktop and find js canvas particles.txt
