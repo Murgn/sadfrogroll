@@ -3,4 +3,4 @@
 
 Made By Murgn#4034
 
-Music function by Doggo#4340
+Music Player by Doggo#4340

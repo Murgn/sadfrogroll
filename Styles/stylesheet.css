@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 body{
-    background-image: linear-gradient(#071835, #26134b);
+    background-image: linear-gradient(#071835, #331c61);
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
 
@@ -16,6 +16,19 @@ h6{
     font-weight: 100;
 }
 
+#sadfrog{
+    animation: zoomIn 1s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+}
+
+#sadfrogtext{
+    color: #72bb40;
+}
+@keyframes zoomIn {
+    100% {
+        transform: scale(1.15, 1.15);
+    }
+}
+
 a:link {
     color: white;
     text-decoration-line: underline;
@@ -26,6 +39,13 @@ a:visited {
     color: white;
   }
 
+
+#canvas
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 
 @media screen and (min-width: 501px){
     body{
@@ -46,4 +66,43 @@ a:visited {
         font-size: 4vh;
     }
     
+}
+
+
+
+/*SNOW CSS*/
+.debris {
+	position: absolute;
+	min-width: 100vw;
+	min-height: 100vh;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+.debris .svg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#debris-top-layer {
+	will-change: transform;
+	transform: translateY(-768px);
+	animation: fall 22.5s infinite linear;
+}
+
+#debris-bottom-layer {
+	will-change: transform;
+	transform: translateY(-768px);
+	animation: fall 45s infinite linear;
+}
+
+@keyframes fall {
+	
+	100% {
+		transform: translateY(0);
+	}
+	
 }

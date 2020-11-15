@@ -1,12 +1,9 @@
 var count = 0;
 var readCount = 0;
 var playing = false;
-var playingNumber = 0;
 const timer = setInterval(() => {
     count += 0.01;
     readCount == count;
-    
-    if(playingNumber == 4){playingNumber = 1;}
 
     document.getElementById("tweeturl").href = "https://twitter.com/intent/tweet?url=http%3A%2F%2Fmurgn.github.io/sadfrogroll/&text=sadfrog%20was%20rolling%20for%20" + number_format(count, 2) + "%20seconds!&related=murgntheurgn&hashtags=sadfrogroll"
     document.getElementById("counter").innerHTML = number_format(count, 2)
@@ -16,6 +13,7 @@ function number_format(val, decimals){
     val = parseFloat(val);
     return val.toFixed(decimals);
 }
+
 
 class music {
     constructor(music) {
@@ -41,3 +39,21 @@ class music {
         this.audioElement.play();
     }
 }
+const audio = new music([
+    {name: "The Seatbelts - Cats on Mars", audio: "The Seatbelts - Cats on Mars.mp3"},
+    {name: "Dan Salvato - Dreams of Love and Literature", audio: "Dan Salvato - Dreams of Love and Literature.mp3"},
+    {name: "Milky Chance - Stolen Dance", audio: "Milky Chance - Stolen Dance.mp3"},
+    {name: "Febbs! - It's Okay", audio: "Febbs! - It's Okay.mp3"},
+    {name: "alt-J - Breezeblocks", audio: "alt-J - Breezeblocks.mp3"},
+    {name: "Febbs! - Cupcakes", audio: "Febbs! - Cupcakes.mp3"},
+    {name: "Porter Robinson - Goodbye To A World", audio: "Porter Robinson - Goodbye To A World.mp3"},
+    {name: "Yu-Ching Fei - Yi Jian Mei", audio: "Yu-Ching Fei - Yi Jian Mei.mp3"},
+    {name: "Vicetone - Astronomia", audio: "Vicetone - Astronomia.mp3"},
+    {name: "Ouse - ｆａｒｃｒｙツ", audio: "Ouse - ｆａｒｃｒｙツ.mp3"}]);
+document.onclick= function(event) {
+    if (event===undefined) event= window.event;
+    audio.GoToNext();
+    document.getElementById("playing").innerHTML = "Playing:";
+};
+
+// to find js particles goto desktop and find js canvas particles.txt
