@@ -1,4 +1,4 @@
 # sadfrogroll :(
-![sadfrogroll](https://raw.githubusercontent.com/Murgn/sadfrogroll/main/docs/Images/sadfrogroll.gif)
+![sadfrogroll](https://github.com/Murgn/sadfrogroll/blob/main/Images/sadfrogroll.gif)
 
 Made By Murgn#4034

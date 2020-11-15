@@ -1,9 +1,13 @@
 var count = 0;
 var readCount = 0;
+var playing = false;
+var playingNumber = 0;
 const timer = setInterval(() => {
     count += 0.01;
     readCount == count;
     
+    if(playingNumber == 4){playingNumber = 1;}
+
     document.getElementById("tweeturl").href = "https://twitter.com/intent/tweet?url=http%3A%2F%2Fmurgn.github.io/sadfrogroll/&text=sadfrog%20was%20rolling%20for%20" + number_format(count, 2) + "%20seconds!&related=murgntheurgn&hashtags=sadfrogroll"
     document.getElementById("counter").innerHTML = number_format(count, 2)
 }, 10)
