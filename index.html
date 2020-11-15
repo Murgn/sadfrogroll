@@ -35,28 +35,21 @@
             </div>
             <div class="container d-flex align-items-end vh-100 justify-content-center" style="height: 100vh">
                 <div class="m-5 p-5">
-                    <h1>He's been rolling for <div id="counter"></div> seconds!</h1>
-                    <h3 id="songname">Playing <div id = "nowplaying"></div></h3>
-                    <!--<p class="text-muted" id="tip">Click anywhere to play music!</p> add this to the html murgn -->
+                    <h1 id="counter">He's been rolling for 0 seconds!</h1>
+                    <h3 id="songname">Click anywhere to play music!</h3>
+                    <audio loop id="musicplayer">
+                        <source src="Cats On Mars.mp3" type="audio/mpeg">
+                    </audio>
                     <h6>
                         <a id="tweeturl" href="https://twitter.com/" target="_blank">Tweet</a>
                         -
-                        <a id="skipsong" href="javascript:audio.GoToNext();">Skip</a>
+                        <a id="skipsong">Skip</a>
                     </h6>
                 </div>
             </div>
         </div>
-      </div>
-      <audio id="audio" onended="audio.GoToNext()"></audio>
     </div>
       <script src="WhereTheMagicHappens.js"></script>
-      <script>
-          const audio = new music([{name: "Cats On Mars", audio: "Cats On Mars.mp3"}, {name: "Dan Salvato - Dreams of Love and Literature (Febbs Remix)", audio: "[Chill] Dan Salvato - Dreams of Love and Literature (Febbs Remix).mp3"}, {name: "Febbs! - It's Okay", audio: "[Future Bass] Febbs! - It's Okay.mp3"}, {name: "GoldHeartSenpai (Febbs!) - My Future", audio: "[Future Bass] GoldHeartSenpai (Febbs!) - My Future.mp3"}, {name: "Febbs! - Cupcakes", audio: "[Glitch Hop] Febbs! - Cupcakes.mp3"}, {name: "Febbs! - Cupcakes (Nezakil Remix)", audio: "[Lo-fi Hip-Hop] Febbs! - Cupcakes (Nezakil Remix).mp3"}]);
-          document.onclick= function(event) {
-              if (event===undefined) event= window.event;
-              audio.GoToNext();
-          };
-      </script>
     <!--gross js bootstrap code :(-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
