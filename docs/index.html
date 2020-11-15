@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sadfrogroll</title>
     <meta property="og:title" content="sadfrogroll">
     <meta property="og:description" content="look at him roll">
@@ -30,20 +30,25 @@
             </div>
         </div>
         <div class="col">
+            <div class="container d-flex align-items-top justify-content-end p-2" style="font-size: 15px;">
+                <a href="https://twitter.com/murgntheurgn" target="_blank">Made by Murgn#4034</a>
+            </div>
             <div class="container d-flex align-items-end vh-100 justify-content-center" style="height: 100vh">
                 <div class="m-5 p-5">
-                    <p id="counter">He's been rolling for 0 seconds!</p>
-                    <h3>Playing !"£$%^&*()</h3>
-                    <p>
+                    <h1 id="counter">He's been rolling for 0 seconds!</h1>
+                    <h3 id="songname">Playing !"£$%^&*()</h3>
+                    <audio autoplay loop id="musicplayer">
+                        <source  src="Cats On Mars.mp3" type="audio/mpeg">
+                    </audio>
+                    <h6>
                         <a id="tweeturl" href="https://twitter.com/" target="_blank">Tweet</a>
                         -
-                        <a id="skipsong">Tweet</a>
-                    </p>
+                        <a id="skipsong">Skip</a>
+                    </h6>
                 </div>
             </div>
         </div>
       </div>
-      <!--CREDIT TO LAG FOR ALL THE JAVASCRIPT CODE <3 (; -->
       <script src="WhereTheMagicHappens.js"></script>
     <!--gross js bootstrap code :(-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
