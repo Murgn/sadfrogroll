@@ -16,11 +16,11 @@ h6{
     font-weight: 100;
 }
 
-#sadfrog{
+#happyfrog{
     animation: zoomIn 1s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
 }
 
-#sadfrogtext{
+#happyfrogtext{
     color: #72bb40;
 }
 @keyframes zoomIn {
