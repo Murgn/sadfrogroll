@@ -5,7 +5,7 @@ const timer = setInterval(() => {
     count += 0.01;
     readCount == count;
 
-    document.getElementById("tweeturl").href = "https://twitter.com/intent/tweet?url=http%3A%2F%2Fmurgn.github.io/sadfrogroll/&text=sadfrog%20was%20rolling%20for%20" + number_format(count, 2) + "%20seconds!&related=murgntheurgn&hashtags=sadfrogroll"
+    document.getElementById("tweeturl").href = "https://twitter.com/intent/tweet?url=http%3A%2F%2Fmurgn.github.io/happyfrogroll/&text=happyfrog%20was%20rolling%20for%20" + number_format(count, 2) + "%20seconds!&related=murgntheurgn&hashtags=happyfrogroll"
     document.getElementById("counter").innerHTML = number_format(count, 2)
 }, 10)
 
