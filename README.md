@@ -6,3 +6,5 @@ https://murgn.com/sadfrogroll
 Made By Murgn#4034
 
 Music Player by Doggo#4340
+
+Epic Issues by DankCoder#9983
