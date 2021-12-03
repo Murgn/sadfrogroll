@@ -7,4 +7,4 @@ Made By Murgn#4034
 
 Music Player by Doggo#4340
 
-Absolutely nothing by DankCoder#9983
+Epic Issues by DankCoder#9983
